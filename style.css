@@ -1,0 +1,159 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+/* Card Container */
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 380px;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px 25px 40px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  animation: slideIn 1.2s ease-in-out;
+}
+
+/* Circle Image */
+.top-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  border: 3px solid #ff005c;
+  box-shadow: 0 0 20px rgba(255, 0, 92, 0.5);
+}
+
+.top-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ff005c, #ffcc70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.estd {
+  color: #ddd;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.subs {
+  font-size: 0.9rem;
+  color: #9ecfff;
+  margin-bottom: 15px;
+}
+
+/* Description */
+.desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #eaeaea;
+  margin-bottom: 25px;
+}
+
+.link-text {
+  color: #ffcc70;
+  font-weight: 600;
+}
+
+/* Timer Section */
+.timer-section {
+  margin-bottom: 20px;
+}
+
+.timer-section p {
+  font-size: 0.9rem;
+  color: #b0c4de;
+}
+
+#timer {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffc6;
+  margin-top: 5px;
+}
+
+/* Button */
+#joinBtn {
+  background: linear-gradient(90deg, #ff005c, #ffcc70);
+  border: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding: 12px 30px;
+  border-radius: 35px;
+  cursor: pointer;
+  animation: fadePulse 2s infinite ease-in-out alternate;
+  transition: all 0.4s ease;
+}
+
+#joinBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 204, 112, 0.7);
+}
+
+/* Animations */
+@keyframes fadePulse {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  .desc {
+    font-size: 0.85rem;
+  }
+  #joinBtn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+}
